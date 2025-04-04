@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import Swal from "sweetalert2";
 import CppEditor from "../../components/editors/CPPEditor/CPPEditor";
 
-const lessons = require("../../../lessons/cpp_lesson.json");
+import lessons from "../../../lessons/cpp_lesson.json";
 
 interface User {
   username: string;
@@ -24,8 +24,13 @@ export default function CppCourses() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [lastOutput, setLastOutput] = useState<string | null>(null);
   const [user, setUser] = useState<User | null>(null);
-  const editorRef = useRef<any>(null);
+  const editorRef = useRef<{
+    getValue: () => string;
+    setValue: (value: string) => void;
+  } | null>(null);
   const router = useRouter();
+
+  
 
   useEffect(() => {
     const storedUser = localStorage.getItem("user");
@@ -70,18 +75,19 @@ export default function CppCourses() {
           if (!response.ok) throw new Error("Failed to fetch progress");
           const data = await response.json();
           const progressMap = data.reduce(
-            (acc: Record<string, boolean>, item: any) => {
+            (acc: Record<string, boolean>, item: { lesson_id: string; completed: boolean }) => {
               acc[item.lesson_id] = item.completed;
               return acc;
             },
             {}
           );
           setProgress(progressMap);
-        } catch (error) {
+        } catch (error: unknown) {
+          console.error("Reset progress error:", error);
           Swal.fire({
             icon: "error",
-            title: "Oops...",
-            text: "Failed to load progress data",
+            title: "Error",
+            text: "Failed to reset progress",
           });
         }
       }
@@ -345,7 +351,7 @@ export default function CppCourses() {
                 <>
                   {progress[selectedLesson.id] && (
                     <div style={styles.completionBanner}>
-                      You've completed this lesson!
+                      You&apos;ve completed this lesson!
                     </div>
                   )}
                   

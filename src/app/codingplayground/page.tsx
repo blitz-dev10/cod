@@ -1,5 +1,6 @@
 "use client";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Editor } from "@monaco-editor/react";
@@ -14,7 +15,8 @@ interface User {
   email: string;
 }
 
-export default function CodePlayground() {
+function CodePlaygroundContent() {
+  const searchParams = useSearchParams();
   const router = useRouter();
   const [user, setUser] = useState<User | null>(null);
   const editorRef = useRef<editor.IStandaloneCodeEditor | null>(null);
@@ -250,6 +252,14 @@ export default function CodePlayground() {
   );
 }
 
+export default function CodePlayground() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <CodePlaygroundContent />
+    </Suspense>
+  );
+}
+
 const styles = {
   container: {
     backgroundColor: '#0f172a',
@@ -403,7 +413,7 @@ const styles = {
     top: '50%',
     transform: 'translateY(-50%)',
     color: '#94a3b8',
-    pointerEvents: 'none',
+    pointerEvents: 'none' as const,
     fontSize: '0.8rem',
   },
   controlsLeft: {

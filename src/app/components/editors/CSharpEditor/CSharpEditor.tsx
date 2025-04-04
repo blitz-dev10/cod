@@ -1,6 +1,5 @@
-// src/app/components/editors/CSharpEditor/CSharpEditor.tsx
 "use client";
-import { useRef, useState } from "react";
+import { forwardRef, useRef, useState, useImperativeHandle } from "react";
 import { Editor } from "@monaco-editor/react";
 import type { editor } from "monaco-editor";
 import { executeCode } from "../../../../../api";
@@ -12,11 +11,23 @@ interface CSharpEditorProps {
   onExecute?: (output: string, error?: string) => void;
 }
 
-const CSharpEditor = ({ defaultValue = "", onExecute }: CSharpEditorProps) => {
+const CSharpEditor = forwardRef<
+  { getValue: () => string; setValue: (value: string) => void },
+  CSharpEditorProps
+>(({ defaultValue = "", onExecute }, ref) => {
   const editorRef = useRef<editor.IStandaloneCodeEditor | null>(null);
   const [output, setOutput] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
+
+  useImperativeHandle(ref, () => ({
+    getValue: () => editorRef.current?.getValue() || "",
+    setValue: (value: string) => {
+      if (editorRef.current) {
+        editorRef.current.setValue(value);
+      }
+    }
+  }));
 
   const runCode = async () => {
     if (!editorRef.current) return;
@@ -65,11 +76,14 @@ const CSharpEditor = ({ defaultValue = "", onExecute }: CSharpEditorProps) => {
           height="300px"
           theme="vs-dark"
           language="csharp"
-          defaultValue={defaultValue || `#include <iostream>
+          defaultValue={defaultValue || `using System;
 
-int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Hello, World!");
+    }
 }`}
           onMount={(editor) => {
             editorRef.current = editor;
@@ -154,6 +168,8 @@ int main() {
       `}</style>
     </div>
   );
-};
+});
+
+CSharpEditor.displayName = 'CSharpEditor';
 
 export default CSharpEditor;

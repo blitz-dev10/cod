@@ -1,6 +1,5 @@
-// src/app/components/editors/CPPEditor/CPPEditor.tsx
 "use client";
-import { useRef, useState } from "react";
+import { forwardRef, useRef, useState, useImperativeHandle } from "react";
 import { Editor } from "@monaco-editor/react";
 import type { editor } from "monaco-editor";
 import { executeCode } from "../../../../../api";
@@ -12,11 +11,23 @@ interface CPPEditorProps {
   onExecute?: (output: string, error?: string) => void;
 }
 
-const CPPEditor = ({ defaultValue = "", onExecute }: CPPEditorProps) => {
+const CPPEditor = forwardRef<
+  { getValue: () => string; setValue: (value: string) => void },
+  CPPEditorProps
+>(({ defaultValue = "", onExecute }, ref) => {
   const editorRef = useRef<editor.IStandaloneCodeEditor | null>(null);
   const [output, setOutput] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
+
+  useImperativeHandle(ref, () => ({
+    getValue: () => editorRef.current?.getValue() || "",
+    setValue: (value: string) => {
+      if (editorRef.current) {
+        editorRef.current.setValue(value);
+      }
+    }
+  }));
 
   const runCode = async () => {
     if (!editorRef.current) return;
@@ -154,6 +165,8 @@ int main() {
       `}</style>
     </div>
   );
-};
+});
+
+CPPEditor.displayName = 'CPPEditor';
 
 export default CPPEditor;

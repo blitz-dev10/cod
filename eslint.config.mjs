@@ -11,6 +11,19 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
+  {
+    rules: {
+      "@typescript-eslint/no-explicit-any": "error",
+      "@typescript-eslint/no-unused-vars": "error",
+      "@typescript-eslint/no-require-imports": "error",
+      "react/no-unescaped-entities": "error"
+    },
+    // Changed from array to object format for flat config
+    plugins: {
+      "@typescript-eslint": require("@typescript-eslint/eslint-plugin"),
+      "react": require("eslint-plugin-react")
+    }
+  }
 ];
 
 export default eslintConfig;

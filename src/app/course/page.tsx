@@ -7,12 +7,11 @@ import ProgressBar from '../components/ProgressBar';
 
 
 // Import your lesson files
-const pythonLessons = require('../../lessons/python_lesson.json');
-const javaLessons = require('../../lessons/java_lesson.json');
-const cppLessons = require('../../lessons/cpp_lesson.json');
-const javascriptLessons = require('../../lessons/javascript_lesson.json');
-const htmlLessons = require('../../lessons/html_lesson.json');
-const csharpLessons = require('../../lessons/csharp_lesson.json')
+import pythonLessons from '../../lessons/python_lesson.json';
+import javaLessons from '../../lessons/java_lesson.json';
+import cppLessons from '../../lessons/cpp_lesson.json';
+import javascriptLessons from '../../lessons/javascript_lesson.json';
+import csharpLessons from '../../lessons/csharp_lesson.json';
 
 interface CourseProgress {
   [key: string]: number;
@@ -41,7 +40,7 @@ export default function Courses() {
     const fetchAllProgress = async () => {
       if (!userId) return;
 
-      const courses = ['python', 'java', 'cpp', 'javascript', 'html', 'csharp'];
+      const courses = ['python', 'java', 'cpp', 'javascript', 'csharp'];
       const progressData: CourseProgress = {};
 
       for (const course of courses) {
@@ -59,7 +58,6 @@ export default function Courses() {
             case 'java': totalLessons = javaLessons.length; break;
             case 'cpp': totalLessons = cppLessons.length; break;
             case 'javascript': totalLessons = javascriptLessons.length; break;
-            case 'html': totalLessons = htmlLessons.length; break;
             case 'csharp': totalLessons = csharpLessons.length; break;
           }
           
@@ -184,15 +182,6 @@ export default function Courses() {
       image: '/javascript.png'
     },
     { 
-      id: 'html',
-      title: "HTML", 
-      description: "Create beautiful websites from scratch",
-      color: "#E34F26",
-      path: "/courses/html",
-      icon: "🎨",
-      image: '/html.png'
-    },
-    { 
       id: "csharp",
       title: "C#",
       description: "Master C# programming for modern applications",
@@ -248,7 +237,9 @@ const styles = {
     cursor: 'pointer',
     transition: 'all 0.3s ease',
     display: 'flex',
-    flexDirection: 'column',
+    flexDirection: 'column' as const,
+    alignItems: 'center',
+    backgroundColor: '#1e293b',
     '&:hover': {
       transform: 'translateY(-5px)',
       boxShadow: '0 8px 25px rgba(0,0,0,0.2)'
@@ -270,29 +261,10 @@ const styles = {
     lineHeight: '1.5',
     marginBottom: '1.5rem'
   },
-  courseCard: {
-    backgroundColor: '#1e293b',
-    borderRadius: '12px',
-    padding: '1.5rem',
-    display: 'flex',
-    flexDirection: 'column' as const,
-    alignItems: 'center',
-    cursor: 'pointer',
-    transition: 'transform 0.2s ease',
-    '&:hover': {
-      transform: 'scale(1.02)',
-    }
-  },
   courseImage: {
     width: '100px',
     height: '100px',
     objectFit: 'contain' as const,
-    marginBottom: '1rem',
-  },
-  courseTitle: {
-    color: '#ffffff',
-    fontSize: '1.25rem',
-    fontWeight: '600',
     marginBottom: '1rem',
   },
   container: {
@@ -578,26 +550,5 @@ const styles = {
     gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
     gap: '2rem',
     marginTop: '3rem',
-  },
-  courseCard: {
-    padding: '2rem',
-    borderRadius: '12px',
-    color: 'white',
-    cursor: 'pointer',
-    transition: 'transform 0.3s ease',
-  },
-  courseIcon: {
-    fontSize: '2.5rem',
-    marginBottom: '1rem',
-  },
-  courseTitle: {
-    fontSize: '1.5rem',
-    fontWeight: '700',
-    marginBottom: '1rem',
-  },
-  courseDescription: {
-    fontSize: '1rem',
-    opacity: 0.9,
-    lineHeight: '1.5',
-  },
+  }
 };
