@@ -1,0 +1,402 @@
+[
+    {
+      "id": 1,
+      "language": "HTML",
+      "title": "Introduction to HTML",
+      "description": "Learn the basics of HTML and how to structure a webpage.",
+      "content": [
+        {
+          "type": "text",
+          "content": "In this lesson, we will learn about the basic structure of an HTML document and how to create a simple webpage."
+        },
+        {
+          "type": "code",
+          "content": "<!DOCTYPE html>\n<html>\n<head>\n  <title>My First Webpage</title>\n</head>\n<body>\n  <h1>Welcome to HTML</h1>\n</body>\n</html>"
+        }
+      ],
+      "test": {
+        "question": "Write an HTML document with a heading that says 'Hello, HTML!'.",
+        "code": "<!DOCTYPE html>\n<html>\n<head>\n  <title>Test Page</title>\n</head>\n<body>\n  <h1>Hello, HTML!</h1>\n</body>\n</html>"
+      }
+    },
+    {
+      "id": 2,
+      "language": "HTML",
+      "title": "HTML Lists",
+      "description": "Learn how to create ordered and unordered lists in HTML.",
+      "content": [
+        {
+          "type": "text",
+          "content": "In this lesson, we will learn about ordered and unordered lists and how to use them in HTML."
+        },
+        {
+          "type": "code",
+          "content": "<ul>\n  <li>Apple</li>\n  <li>Banana</li>\n  <li>Cherry</li>\n</ul>\n\n<ol>\n  <li>First Step</li>\n  <li>Second Step</li>\n  <li>Third Step</li>\n</ol>"
+        }
+      ],
+      "test": {
+        "question": "Create an unordered list with three items: 'HTML', 'CSS', and 'JavaScript'.",
+        "code": "<ul>\n  <li>HTML</li>\n  <li>CSS</li>\n  <li>JavaScript</li>\n</ul>"
+      }
+    },
+    {
+      "id": 3,
+      "language": "CSS",
+      "title": "Introduction to CSS",
+      "description": "Learn how to style HTML elements using CSS.",
+      "content": [
+        {
+          "type": "text",
+          "content": "In this lesson, we will learn how to apply styles to HTML elements using CSS."
+        },
+        {
+          "type": "code",
+          "content": "h1 {\n  color: blue;\n  font-size: 24px;\n}\n\np {\n  font-family: Arial, sans-serif;\n  line-height: 1.5;\n}"
+        }
+      ],
+      "test": {
+        "question": "Write a CSS rule to set the background color of the body to light gray.",
+        "code": "body {\n  background-color: lightgray;\n}"
+      }
+    },
+    {
+      "id": 4,
+      "language": "CSS",
+      "title": "CSS Box Model",
+      "description": "Understand the CSS Box Model and how it affects element layout.",
+      "content": [
+        {
+          "type": "text",
+          "content": "In this lesson, we will learn about the CSS Box Model, including margin, padding, border, and content area."
+        },
+        {
+          "type": "code",
+          "content": "div {\n  width: 200px;\n  height: 100px;\n  padding: 10px;\n  border: 2px solid black;\n  margin: 20px;\n}"
+        }
+      ],
+      "test": {
+        "question": "Set a padding of 15px and a border of 3px solid red for a <div> element.",
+        "code": "div {\n  padding: 15px;\n  border: 3px solid red;\n}"
+      }
+    },
+    {
+      "id": 5,
+      "language": "CSS",
+      "title": "CSS Flexbox",
+      "description": "Learn how to create flexible layouts using CSS Flexbox.",
+      "content": [
+        {
+          "type": "text",
+          "content": "Flexbox is a powerful layout model that makes it easier to design flexible responsive layouts. In this lesson, we'll learn the basic concepts of Flexbox and how to use it."
+        },
+        {
+          "type": "code",
+          "content": ".container {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n\n.item {\n  flex: 1;\n  margin: 10px;\n}"
+        }
+      ],
+      "test": {
+        "question": "Create a flex container with three items arranged in a row with space between them.",
+        "code": ".container {\n  display: flex;\n  justify-content: space-between;\n}\n\n.item {\n  width: 100px;\n}"
+      }
+    },
+    {
+      "id": 6,
+      "language": "HTML",
+      "title": "HTML Links",
+      "description": "Learn how to create links to other pages and resources.",
+      "content": [
+        {
+          "type": "text",
+          "content": "Links are fundamental to web navigation. In this lesson, we'll learn how to create different types of links and understand their attributes."
+        },
+        {
+          "type": "code",
+          "content": "<a href=\"https://www.example.com\">Visit Example</a>\n\n<a href=\"about.html\">About Us</a>\n\n<a href=\"#section1\">Jump to Section</a>"
+        }
+      ],
+      "test": {
+        "question": "Create a link to 'contact.html' with the text 'Contact Us'.",
+        "code": "<a href=\"contact.html\">Contact Us</a>"
+      }
+    },
+    {
+      "id": 7,
+      "language": "HTML",
+      "title": "HTML Images",
+      "description": "Learn how to add and style images in HTML.",
+      "content": [
+        {
+          "type": "text",
+          "content": "Images make web pages more engaging. We'll learn how to add images, set their attributes, and make them responsive."
+        },
+        {
+          "type": "code",
+          "content": "<img src=\"cat.jpg\" alt=\"A cute cat\" width=\"300\" height=\"200\">\n\n<figure>\n  <img src=\"dog.jpg\" alt=\"A playful dog\">\n  <figcaption>My pet dog</figcaption>\n</figure>"
+        }
+      ],
+      "test": {
+        "question": "Add an image with source 'logo.png', alternative text 'Company Logo', and width of 200 pixels.",
+        "code": "<img src=\"logo.png\" alt=\"Company Logo\" width=\"200\">"
+      }
+    },
+    {
+      "id": 8,
+      "language": "CSS",
+      "title": "CSS Grid",
+      "description": "Learn how to create grid layouts using CSS Grid.",
+      "content": [
+        {
+          "type": "text",
+          "content": "CSS Grid is a powerful two-dimensional layout system. We'll learn how to create complex layouts using rows and columns."
+        },
+        {
+          "type": "code",
+          "content": ".grid-container {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 20px;\n}\n\n.grid-item {\n  padding: 20px;\n  background-color: #f0f0f0;\n}"
+        }
+      ],
+      "test": {
+        "question": "Create a grid with two columns of equal width and a 10px gap between items.",
+        "code": ".grid-container {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 10px;\n}"
+      }
+    },
+    {
+      "id": 9,
+      "language": "HTML",
+      "title": "HTML Forms",
+      "description": "Learn how to create forms for user input.",
+      "content": [
+        {
+          "type": "text",
+          "content": "Forms allow users to input data. We'll learn about different form elements and how to structure them properly."
+        },
+        {
+          "type": "code",
+          "content": "<form action=\"/submit\" method=\"post\">\n  <label for=\"name\">Name:</label>\n  <input type=\"text\" id=\"name\" name=\"name\">\n  \n  <label for=\"email\">Email:</label>\n  <input type=\"email\" id=\"email\" name=\"email\">\n  \n  <button type=\"submit\">Submit</button>\n</form>"
+        }
+      ],
+      "test": {
+        "question": "Create a simple form with a username input field and a submit button.",
+        "code": "<form>\n  <input type=\"text\" name=\"username\">\n  <button type=\"submit\">Submit</button>\n</form>"
+      }
+    },
+    {
+      "id": 10,
+      "language": "CSS",
+      "title": "CSS Colors and Gradients",
+      "description": "Learn about color values and gradients in CSS.",
+      "content": [
+        {
+          "type": "text",
+          "content": "Colors and gradients can make websites more visually appealing. We'll learn different ways to specify colors and create gradient backgrounds."
+        },
+        {
+          "type": "code",
+          "content": ".color-example {\n  color: #ff5733;\n  background-color: rgba(0, 0, 0, 0.5);\n}\n\n.gradient-example {\n  background: linear-gradient(to right, #ff0000, #00ff00);\n}"
+        }
+      ],
+      "test": {
+        "question": "Create a linear gradient background that goes from blue to green.",
+        "code": ".gradient {\n  background: linear-gradient(to right, blue, green);\n}"
+      }
+    },
+    {
+      "id": 11,
+      "language": "HTML",
+      "title": "HTML Tables",
+      "description": "Learn how to create and structure tables in HTML.",
+      "content": [
+        {
+          "type": "text",
+          "content": "Tables are used to display tabular data. We'll learn how to create tables with headers, rows, and columns."
+        },
+        {
+          "type": "code",
+          "content": "<table>\n  <thead>\n    <tr>\n      <th>Name</th>\n      <th>Age</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>John</td>\n      <td>25</td>\n    </tr>\n  </tbody>\n</table>"
+        }
+      ],
+      "test": {
+        "question": "Create a 2x2 table with headers 'Name' and 'Score'.",
+        "code": "<table>\n  <tr>\n    <th>Name</th>\n    <th>Score</th>\n  </tr>\n  <tr>\n    <td>Alice</td>\n    <td>95</td>\n  </tr>\n</table>"
+      }
+    },
+    {
+      "id": 12,
+      "language": "CSS",
+      "title": "CSS Transitions",
+      "description": "Learn how to create smooth transitions between states.",
+      "content": [
+        {
+          "type": "text",
+          "content": "CSS transitions allow elements to change properties smoothly. We'll learn how to create simple animations using transitions."
+        },
+        {
+          "type": "code",
+          "content": ".button {\n  background-color: blue;\n  transition: background-color 0.3s ease;\n}\n\n.button:hover {\n  background-color: darkblue;\n}"
+        }
+      ],
+      "test": {
+        "question": "Create a transition that changes an element's opacity on hover.",
+        "code": ".fade {\n  opacity: 1;\n  transition: opacity 0.3s ease;\n}\n\n.fade:hover {\n  opacity: 0.5;\n}"
+      }
+    },
+    {
+      "id": 13,
+      "language": "HTML",
+      "title": "Semantic HTML",
+      "description": "Learn about semantic HTML elements and their proper usage.",
+      "content": [
+        {
+          "type": "text",
+          "content": "Semantic HTML gives meaning to the structure of web content. We'll learn about elements like header, nav, main, article, and footer."
+        },
+        {
+          "type": "code",
+          "content": "<header>\n  <h1>Website Title</h1>\n  <nav>\n    <ul>\n      <li><a href=\"#\">Home</a></li>\n      <li><a href=\"#\">About</a></li>\n    </ul>\n  </nav>\n</header>\n<main>\n  <article>\n    <h2>Article Title</h2>\n    <p>Content goes here.</p>\n  </article>\n</main>\n<footer>\n  <p>&copy; 2025</p>\n</footer>"
+        }
+      ],
+      "test": {
+        "question": "Create a semantic structure with a header containing a title and a main section with an article.",
+        "code": "<header>\n  <h1>My Website</h1>\n</header>\n<main>\n  <article>\n    <h2>Welcome</h2>\n    <p>Hello World</p>\n  </article>\n</main>"
+      }
+    },
+    {
+      "id": 14,
+      "language": "CSS",
+      "title": "CSS Media Queries",
+      "description": "Learn how to create responsive designs with media queries.",
+      "content": [
+        {
+          "type": "text",
+          "content": "Media queries allow us to apply different styles based on device characteristics. We'll learn how to create responsive layouts."
+        },
+        {
+          "type": "code",
+          "content": "@media screen and (max-width: 600px) {\n  .container {\n    flex-direction: column;\n  }\n  \n  .item {\n    width: 100%;\n  }\n}"
+        }
+      ],
+      "test": {
+        "question": "Write a media query that changes text color to red when screen width is less than 500px.",
+        "code": "@media screen and (max-width: 500px) {\n  body {\n    color: red;\n  }\n}"
+      }
+    },
+    {
+      "id": 15,
+      "language": "HTML",
+      "title": "HTML Audio and Video",
+      "description": "Learn how to embed media content in HTML.",
+      "content": [
+        {
+          "type": "text",
+          "content": "HTML5 provides built-in support for audio and video content. We'll learn how to embed media files with proper controls."
+        },
+        {
+          "type": "code",
+          "content": "<video width=\"320\" height=\"240\" controls>\n  <source src=\"movie.mp4\" type=\"video/mp4\">\n  Your browser does not support video.\n</video>\n\n<audio controls>\n  <source src=\"music.mp3\" type=\"audio/mpeg\">\n  Your browser does not support audio.\n</audio>"
+        }
+      ],
+      "test": {
+        "question": "Create a video element with controls and dimensions of 400x300.",
+        "code": "<video width=\"400\" height=\"300\" controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n</video>"
+      }
+    },
+    {
+      "id": 16,
+      "language": "CSS",
+      "title": "CSS Positioning",
+      "description": "Learn about different positioning methods in CSS.",
+      "content": [
+        {
+          "type": "text",
+          "content": "CSS positioning allows us to control how elements are positioned in the document flow. We'll learn about relative, absolute, and fixed positioning."
+        },
+        {
+          "type": "code",
+          "content": ".relative {\n  position: relative;\n  top: 20px;\n  left: 20px;\n}\n\n.absolute {\n  position: absolute;\n  top: 0;\n  right: 0;\n}\n\n.fixed {\n  position: fixed;\n  bottom: 20px;\n  right: 20px;\n}"
+        }
+      ],
+      "test": {
+        "question": "Position an element in the top-right corner of its container using absolute positioning.",
+        "code": ".corner {\n  position: absolute;\n  top: 0;\n  right: 0;\n}"
+      }
+    },
+    {
+      "id": 17,
+      "language": "HTML",
+      "title": "HTML Metadata",
+      "description": "Learn about metadata and its importance in web pages.",
+      "content": [
+        {
+          "type": "text",
+          "content": "Metadata provides information about the webpage to browsers and search engines. We'll learn about important meta tags and their purposes."
+        },
+        {
+          "type": "code",
+          "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <meta name=\"description\" content=\"Page description\">\n  <title>Page Title</title>\n</head>\n<body>\n  <h1>Content</h1>\n</body>\n</html>"
+        }
+      ],
+      "test": {
+        "question": "Add viewport and description meta tags to an HTML document.",
+        "code": "<!DOCTYPE html>\n<html>\n<head>\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <meta name=\"description\" content=\"My webpage description\">\n  <title>My Page</title>\n</head>\n<body>\n</body>\n</html>"
+      }
+    },
+    {
+      "id": 18,
+      "language": "CSS",
+      "title": "CSS Variables",
+      "description": "Learn how to use CSS custom properties (variables).",
+      "content": [
+        {
+          "type": "text",
+          "content": "CSS variables allow us to store and reuse values throughout our stylesheets. We'll learn how to define and use custom properties."
+        },
+        {
+          "type": "code",
+          "content": ":root {\n  --primary-color: #3498db;\n  --spacing: 20px;\n}\n\n.button {\n  background-color: var(--primary-color);\n  margin: var(--spacing);\n}"
+        }
+      ],
+      "test": {
+        "question": "Create a CSS variable for a theme color and use it in multiple properties.",
+        "code": ":root {\n  --theme-color: #ff0000;\n}\n\n.element {\n  color: var(--theme-color);\n  border: 1px solid var(--theme-color);\n}"
+      }
+    },
+    {
+      "id": 19,
+      "language": "HTML",
+      "title": "HTML Forms Advanced",
+      "description": "Learn about advanced form elements and attributes.",
+      "content": [
+        {
+          "type": "text",
+          "content": "Advanced form elements provide better user experience and data validation. We'll learn about different input types and form validation attributes."
+        },
+        {
+          "type": "code",
+          "content": "<form>\n  <input type=\"date\" name=\"date\">\n  <input type=\"color\" name=\"color\">\n  <input type=\"range\" min=\"0\" max=\"100\">\n  <input type=\"email\" required>\n  <input type=\"tel\" pattern=\"[0-9]{10}\">\n</form>"
+        }
+      ],
+      "test": {
+        "question": "Create a form with an email input and a number input with min and max values.",
+        "code": "<form>\n  <input type=\"email\" required>\n  <input type=\"number\" min=\"1\" max=\"10\">\n</form>"
+      }
+    },
+    {
+      "id": 20,
+      "language": "CSS",
+      "title": "CSS Animation",
+      "description": "Learn how to create CSS animations.",
+      "content": [
+        {
+          "type": "text",
+          "content": "CSS animations allow us to create complex movements and transitions. We'll learn about keyframes and animation properties."
+        },
+        {
+          "type": "code",
+          "content": "@keyframes slide {\n  from {\n    transform: translateX(0);\n  }\n  to {\n    transform: translateX(100px);\n  }\n}\n\n.animated {\n  animation: slide 2s ease infinite;\n}"
+        }
+      ],
+      "test": {
+        "question": "Create a simple fade-in animation using keyframes.",
+        "code": "@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n\n.fade {\n  animation: fadeIn 1s ease-in;\n}"
+      }
+    }
+]

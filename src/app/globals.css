@@ -1,8 +1,23 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary-color: #6a3de8;
+  --primary-dark: #5a2de0;
+  --primary-light: #8d67f0;
+  --secondary-color: #22c1c3;
+  --bg-dark: #0f0f1a;
+  --bg-medium: #1a1a2e;
+  --bg-light: #24243e;
+  --text-light: #ffffff;
+  --text-muted: #a0a0c0;
+  --success-color: #28a745;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+  --border-radius: 8px;
+  --transition-speed: 0.3s;
+  --sidebar-width: 280px;
+  --sidebar-collapsed-width: 60px;
+  --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 @theme inline {
@@ -23,4 +38,12 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+#nprogress .bar {
+  background: #ff4500 !important; /* Change to your preferred color */
+  height: 4px !important;
+}
+
+#nprogress .peg {
+  box-shadow: 0 0 10px #ff4500, 0 0 5px #ff4500 !important;
 }

@@ -1,0 +1,548 @@
+[
+    {
+      "id": 1,
+      "language": "C++",
+      "title": "Introduction to C++",
+      "description": "Learn the basics of C++ programming.",
+      "content": [
+        {
+          "type": "text",
+          "content": "In this lesson, we will cover basic C++ syntax and how to print to the console using cout."
+        },
+        {
+          "type": "code",
+          "content": "#include <iostream>\nusing namespace std;\nint main() {\n    cout << \"Hello, World!\";\n    return 0;\n}"
+        }
+      ],
+      "test": {
+        "question": "Write a C++ program to print 'Hello, World!' to the console.",
+        "code": "#include <iostream>\nusing namespace std;\nint main() {\n    cout << \"Hello, World!\";\n    return 0;\n}",
+        "expected_output": "Hello, World!"
+      }
+    },
+    {
+      "id": 2,
+      "language": "C++",
+      "title": "C++ Variables and Data Types",
+      "description": "Learn how to declare variables and use basic data types in C++.",
+      "content": [
+        {
+          "type": "text",
+          "content": "In this lesson, we will learn about C++ variables, data types, and how to output their values."
+        },
+        {
+          "type": "code",
+          "content": "#include <iostream>\nusing namespace std;\nint main() {\n    int age = 25;\n    double height = 5.9;\n    string name = \"John\";\n    cout << \"Name: \" << name << endl;\n    cout << \"Age: \" << age << endl;\n    cout << \"Height: \" << height << endl;\n    return 0;\n}"
+        }
+      ],
+      "test": {
+        "question": "Declare a string variable 'city' with value 'New York' and print it.",
+        "code": "#include <iostream>\nusing namespace std;\nint main() {\n    string city = \"New York\";\n    cout << city;\n    return 0;\n}",
+        "expected_output": "New York"
+      }
+    },
+    {
+      "id": 3,
+      "language": "C++",
+      "title": "C++ Conditional Statements",
+      "description": "Learn how to use if-else statements in C++.",
+      "content": [
+        {
+          "type": "text",
+          "content": "In this lesson, we will learn how to use if-else statements to control the flow of execution in a C++ program."
+        },
+        {
+          "type": "code",
+          "content": "#include <iostream>\nusing namespace std;\nint main() {\n    int number = 10;\n    if (number % 2 == 0) {\n        cout << \"Even Number\";\n    } else {\n        cout << \"Odd Number\";\n    }\n    return 0;\n}"
+        }
+      ],
+      "test": {
+        "question": "Write a C++ program to check if the number 8 is even or odd.",
+        "code": "#include <iostream>\nusing namespace std;\nint main() {\n    int number = 7;\n    if (number % 2 == 0) {\n        cout << \"Even Number\";\n    } else {\n        cout << \"Odd Number\";\n    }\n    return 0;\n}",
+        "expected_output": "Even Number"
+      }
+    },
+    {
+      "id": 4,
+      "language": "C++",
+      "title": "C++ Loops",
+      "description": "Learn how to use loops in C++.",
+      "content": [
+        {
+          "type": "text",
+          "content": "In this lesson, we will learn about loops in C++, which allow us to execute a block of code multiple times. Loops help in reducing redundancy and making our programs more efficient. There are different types of loops in C++, including for loops, while loops, and do-while loops. The for loop is generally used when we know the exact number of iterations beforehand, while the while loop is used when the number of iterations is unknown and depends on a condition. Below is an example demonstrating a for loop that prints numbers from 1 to 5."
+        },
+        {
+          "type": "code",
+          "content": "#include <iostream>\nusing namespace std;\nint main() {\n    for (int i = 1; i <= 5; i++) {\n        cout << i << endl;\n    }\n    return 0;\n}"
+        }
+      ],
+      "test": {
+        "question": "Write a C++ program to print numbers from 1 to 10 using a for loop.",
+        "code": "#include <iostream>\nusing namespace std;\nint main() {\n    for (int i = 1; i <= 10; i++) {\n        cout << i << endl;\n    }\n    return 0;\n}",
+        "expected_output": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10"
+      }
+    },
+    {
+      "id": 5,
+      "language": "C++",
+      "title": "C++ Functions",
+      "description": "Learn how to use functions in C++.",
+      "content": [
+        {
+          "type": "text",
+          "content": "In this lesson, we will learn about functions in C++, which help in breaking down large programs into smaller, manageable parts. Functions allow us to reuse code and improve program structure. A function is a block of code that performs a specific task and can be called multiple times throughout the program. Functions in C++ can be built-in (like cout and cin) or user-defined. Below is an example of a simple function named 'greet' that prints a welcome message."
+        },
+        {
+          "type": "code",
+          "content": "#include <iostream>\nusing namespace std;\nvoid greet() {\n    cout << \"Hello, Welcome to C++!\" << endl;\n}\nint main() {\n    greet();\n    return 0;\n}"
+        }
+      ],
+      "test": {
+        "question": "Write a C++ function named 'display' that prints 'Hello from Function!'.",
+        "code": "#include <iostream>\nusing namespace std;\nvoid display() {\n    cout << \"Hello from Function!\";\n}\nint main() {\n    display();\n    return 0;\n}",
+        "expected_output": "Hello from Function!"
+      }
+    },
+    {
+      "id": 6,
+      "language": "C++",
+      "title": "C++ Arrays",
+      "description": "Learn how to use arrays in C++.",
+      "content": [
+        {
+          "type": "text",
+          "content": "In this lesson, we will learn about arrays in C++, which are used to store multiple values of the same type in a single variable. Arrays provide a convenient way to work with large amounts of data, as they allow us to access elements using an index. C++ arrays have a fixed size, meaning we must specify the number of elements at the time of declaration. Below is an example demonstrating an array that stores five numbers and prints them using a loop."
+        },
+        {
+          "type": "code",
+          "content": "#include <iostream>\nusing namespace std;\nint main() {\n    int numbers[5] = {1, 2, 3, 4, 5};\n    for (int i = 0; i < 5; i++) {\n        cout << numbers[i] << endl;\n    }\n    return 0;\n}"
+        }
+      ],
+      "test": {
+        "question": "Write a C++ program to print the elements of an array {10, 20, 30, 40, 50}.",
+        "code": "#include <iostream>\nusing namespace std;\nint main() {\n    int numbers[5] = {10, 20, 30, 40, 50};\n    for (int i = 0; i < 5; i++) {\n        cout << numbers[i] << endl;\n    }\n    return 0;\n}",
+        "expected_output": "10\n20\n30\n40\n50"
+      }
+    },
+    {
+      "id": 7,
+      "language": "C++",
+      "title": "C++ Multidimensional Arrays",
+      "description": "Learn how to use multidimensional arrays in C++.",
+      "content": [
+        {
+          "type": "text",
+          "content": "In this lesson, we will learn about multidimensional arrays in C++. Unlike one-dimensional arrays, multidimensional arrays can store data in a tabular format, making them useful for working with matrices and grids. A common type is a two-dimensional array, which represents a matrix with rows and columns. Below is an example demonstrating a 2D array that stores a 3x3 matrix and prints its values."
+        },
+        {
+          "type": "code",
+          "content": "#include <iostream>\nusing namespace std;\nint main() {\n    int matrix[3][3] = {\n        {1, 2, 3},\n        {4, 5, 6},\n        {7, 8, 9}\n    };\n    for (int i = 0; i < 3; i++) {\n        for (int j = 0; j < 3; j++) {\n            cout << matrix[i][j] << \" \";\n        }\n        cout << endl;\n    }\n    return 0;\n}"
+        }
+      ],
+      "test": {
+        "question": "Write a C++ program to print a 2x2 matrix { {1, 2}, {3, 4} }.",
+        "code": "#include <iostream>\nusing namespace std;\nint main() {\n    int matrix[2][2] = { {1, 2}, {3, 4} };\n    for (int i = 0; i < 2; i++) {\n        for (int j = 0; j < 2; j++) {\n            cout << matrix[i][j] << \" \";\n        }\n        cout << endl;\n    }\n    return 0;\n}",
+        "expected_output": "1 2\n3 4"
+      }
+    },
+    {
+      "id": 8,
+      "language": "C++",
+      "title": "C++ Pointers",
+      "description": "Learn how to use pointers in C++.",
+      "content": [
+        {
+          "type": "text",
+          "content": "Pointers are variables that store the memory addresses of other variables. They allow direct memory manipulation, making them a powerful tool in C++. Pointers are declared using the '*' symbol, and the '&' operator is used to get the address of a variable. Below is an example demonstrating the use of a pointer to access and modify a variable's value."
+        },
+        {
+          "type": "code",
+          "content": "#include <iostream>\nusing namespace std;\nint main() {\n    int number = 10;\n    int* ptr = &number;\n    cout << \"Value: \" << *ptr << endl;\n    *ptr = 20;\n    cout << \"New Value: \" << number << endl;\n    return 0;\n}"
+        }
+      ],
+      "test": {
+        "question": "Write a C++ program to declare a pointer to an integer value 5 and print its value.",
+        "code": "#include <iostream>\nusing namespace std;\nint main() {\n    int num = 5;\n    int* ptr = &num;\n    cout << *ptr;\n    return 0;\n}",
+        "expected_output": "5"
+      }
+    },
+    {
+      "id": 9,
+      "language": "C++",
+      "title": "C++ Classes - Basics",
+      "description": "Learn the basics of classes in C++.",
+      "content": [
+        {
+          "type": "text",
+          "content": "In this lesson, we will learn about classes, which are the foundation of object-oriented programming in C++. A class is a blueprint for creating objects, combining data and functions that work on that data. Classes help in organizing code and making it more modular and reusable. Each class has attributes (data members) and methods (member functions). Below is an example of a simple class named 'Rectangle' that has two attributes (length and width) and a method to calculate the area."
+        },
+        {
+          "type": "code",
+          "content": "#include <iostream>\nusing namespace std;\n\nclass Rectangle {\nprivate:\n    int length;\n    int width;\npublic:\n    void setDimensions(int l, int w) {\n        length = l;\n        width = w;\n    }\n    int calculateArea() {\n        return length * width;\n    }\n};\n\nint main() {\n    Rectangle rect;\n    rect.setDimensions(5, 3);\n    cout << \"Area: \" << rect.calculateArea();\n    return 0;\n}"
+        }
+      ],
+      "test": {
+        "question": "Create a class 'Square' with a method to calculate its area and print the area for a square with side length 4.",
+        "code": "#include <iostream>\nusing namespace std;\n\nclass Square {\nprivate:\n    int side;\npublic:\n    void setSide(int s) {\n        side = s;\n    }\n    int calculateArea() {\n        return side * side;\n    }\n};\n\nint main() {\n    Square sq;\n    sq.setSide(4);\n    cout << sq.calculateArea();\n    return 0;\n}",
+        "expected_output": "16"
+      }
+    },
+    {
+      "id": 10,
+      "language": "C++",
+      "title": "C++ Class Constructors",
+      "description": "Learn how to use constructors in C++ classes.",
+      "content": [
+        {
+          "type": "text",
+          "content": "In this lesson, we will learn about constructors in C++ classes. A constructor is a special member function that is automatically called when an object of a class is created. It has the same name as the class and does not have a return type. Constructors are used to initialize the object's data members. They can be default (no parameters), parameterized (with parameters), or copy constructors (initializing an object with another object of the same class). Below is an example of a class with a parameterized constructor."
+        },
+        {
+          "type": "code",
+          "content": "#include <iostream>\nusing namespace std;\n\nclass Student {\nprivate:\n    string name;\n    int age;\npublic:\n    // Constructor\n    Student(string n, int a) {\n        name = n;\n        age = a;\n    }\n    void display() {\n        cout << \"Name: \" << name << \", Age: \" << age;\n    }\n};\n\nint main() {\n    Student s1(\"Alice\", 15);\n    s1.display();\n    return 0;\n}"
+        }
+      ],
+      "test": {
+        "question": "Create a 'Car' class with a constructor that sets its model to 'Tesla' and print only the model name.",
+        "code": "#include <iostream>\nusing namespace std;\n\nclass Car {\nprivate:\n    string model;\npublic:\n    Car(string m) {\n        model = m;\n    }\n    void display() {\n        cout << model;\n    }\n};\n\nint main() {\n    Car c1(\"Tesla\");\n    c1.display();\n    return 0;\n}",
+        "expected_output": "Tesla"
+      }
+    },
+    {
+      "id": 11,
+      "language": "C++",
+      "title": "C++ Inheritance",
+      "description": "Learn about inheritance in C++.",
+      "content": [
+        {
+          "type": "text",
+          "content": "In this lesson, we will learn about inheritance, which is a key concept in object-oriented programming. Inheritance allows a class (derived class) to inherit properties and methods from another class (base class). This promotes code reusability and establishes a relationship between classes. The derived class can add its own members and can also override the base class methods. C++ supports different types of inheritance, including single, multiple, and multilevel inheritance. Below is an example of single inheritance where a 'Student' class inherits from a 'Person' class."
+        },
+        {
+          "type": "code",
+          "content": "#include <iostream>\nusing namespace std;\n\nclass Person {\nprotected:\n    string name;\n    int age;\npublic:\n    void setPersonInfo(string n, int a) {\n        name = n;\n        age = a;\n    }\n    void displayPerson() {\n        cout << \"Name: \" << name << \", Age: \" << age << endl;\n    }\n};\n\nclass Student : public Person {\nprivate:\n    int grade;\npublic:\n    void setStudentInfo(string n, int a, int g) {\n        setPersonInfo(n, a);\n        grade = g;\n    }\n    void displayStudent() {\n        displayPerson();\n        cout << \"Grade: \" << grade;\n    }\n};\n\nint main() {\n    Student s1;\n    s1.setStudentInfo(\"Bob\", 14, 9);\n    s1.displayStudent();\n    return 0;\n}"
+        }
+      ],
+      "test": {
+        "question": "Create a class 'Animal' with a method 'speak()' that outputs 'Animal sound' and a derived class 'Dog' that overrides the speak method to output 'Woof!'",
+        "code": "#include <iostream>\nusing namespace std;\n\nclass Animal {\npublic:\n    void speak() {\n        cout << \"Animal sound\";\n    }\n};\n\nclass Dog : public Animal {\npublic:\n    void speak() {\n        cout << \"Woof!\";\n    }\n};\n\nint main() {\n    Dog d1;\n    d1.speak();\n    return 0;\n}",
+        "expected_output": "Woof!"
+      }
+    },
+    {
+      "id": 12,
+      "language": "C++",
+      "title": "C++ Polymorphism",
+      "description": "Learn about polymorphism in C++.",
+      "content": [
+        {
+          "type": "text",
+          "content": "In this lesson, we will learn about polymorphism, which means 'many forms'. It allows objects of different classes to be treated as objects of a common base class. There are two types of polymorphism in C++: compile-time (function overloading and operator overloading) and runtime (function overriding). Function overriding occurs when a derived class has a method with the same name and parameters as a method in its base class. Virtual functions are used to achieve runtime polymorphism. Below is an example demonstrating function overriding and the use of virtual functions."
+        },
+        {
+          "type": "code",
+          "content": "#include <iostream>\nusing namespace std;\n\nclass Shape {\npublic:\n    virtual void draw() {\n        cout << \"Drawing a shape\" << endl;\n    }\n};\n\nclass Circle : public Shape {\npublic:\n    void draw() {\n        cout << \"Drawing a circle\";\n    }\n};\n\nint main() {\n    Shape* s;\n    Circle c;\n    s = &c;\n    s->draw();  // Calls Circle's draw() method\n    return 0;\n}"
+        }
+      ],
+      "test": {
+        "question": "Create a base class 'Animal' with a virtual method 'makeSound()' and a derived class 'Cat' that overrides it to print 'Meow'",
+        "code": "#include <iostream>\nusing namespace std;\n\nclass Animal {\npublic:\n    virtual void makeSound() {\n        cout << \"Animal sound\";\n    }\n};\n\nclass Cat : public Animal {\npublic:\n    void makeSound() {\n        cout << \"Meow\";\n    }\n};\n\nint main() {\n    Animal* a;\n    Cat c;\n    a = &c;\n    a->makeSound();\n    return 0;\n}",
+        "expected_output": "Meow"
+      }
+    },
+    {
+      "id": 13,
+      "language": "C++",
+      "title": "C++ Function Overloading",
+      "description": "Learn about function overloading in C++.",
+      "content": [
+        {
+          "type": "text",
+          "content": "In this lesson, we will learn about function overloading, which is a form of compile-time polymorphism. Function overloading allows us to have multiple functions with the same name but different parameters (either different number or types of parameters). The compiler determines which function to call based on the arguments passed. This makes the code more readable and intuitive, as we can use the same function name for operations that are conceptually similar but work with different data types. Below is an example demonstrating function overloading with a function that can calculate the area of different shapes."
+        },
+        {
+          "type": "code",
+          "content": "#include <iostream>\nusing namespace std;\n\n// Calculate area of a square\nint calculateArea(int side) {\n    return side * side;\n}\n\n// Calculate area of a rectangle\nint calculateArea(int length, int width) {\n    return length * width;\n}\n\n// Calculate area of a circle (approximate)\ndouble calculateArea(double radius) {\n    return 3.14 * radius * radius;\n}\n\nint main() {\n    cout << \"Area of square: \" << calculateArea(5) << endl;\n    cout << \"Area of rectangle: \" << calculateArea(4, 6) << endl;\n    cout << \"Area of circle: \" << calculateArea(3.0);\n    return 0;\n}"
+        }
+      ],
+      "test": {
+        "question": "Create two overloaded functions named 'printValue': one for integers and one for strings. Call them with 100 and 'Hello' in sequence.",
+        "code": "#include <iostream>\nusing namespace std;\n\nvoid printValue(int val) {\n    cout << val << endl;\n}\n\nvoid printValue(string val) {\n    cout << val;\n}\n\nint main() {\n    printValue(100);\n    printValue(\"Hello\");\n    return 0;\n}",
+        "expected_output": "100\nHello"
+      }
+    },
+    {
+      "id": 14,
+      "language": "C++",
+      "title": "C++ Operator Overloading",
+      "description": "Learn how to overload operators in C++.",
+      "content": [
+        {
+          "type": "text",
+          "content": "In this lesson, we will learn about operator overloading, which allows us to redefine the way operators work for user-defined data types (classes). This is another form of compile-time polymorphism. By overloading operators, we can make our code more intuitive and easier to read. For example, we can define what it means to add two objects of a custom class using the '+' operator. C++ allows most operators to be overloaded, including arithmetic, comparison, and assignment operators. Below is an example demonstrating how to overload the '+' operator for a 'Complex' number class."
+        },
+        {
+          "type": "code",
+          "content": "#include <iostream>\nusing namespace std;\n\nclass Complex {\nprivate:\n    int real, imag;\npublic:\n    Complex(int r = 0, int i = 0) {\n        real = r;\n        imag = i;\n    }\n    \n    // Overload + operator\n    Complex operator + (Complex const &obj) {\n        Complex res;\n        res.real = real + obj.real;\n        res.imag = imag + obj.imag;\n        return res;\n    }\n    \n    void display() {\n        cout << real << \" + \" << imag << \"i\";\n    }\n};\n\nint main() {\n    Complex c1(3, 2), c2(1, 4);\n    Complex c3 = c1 + c2;  // Using overloaded + operator\n    c3.display();\n    return 0;\n}"
+        }
+      ],
+      "test": {
+        "question": "Create a 'Box' class with length, width, height of 3x4x5 and 3x3x5, then overload the '+' operator to combine their dimensions and print the volume of the resulting box.",
+        "code": "#include <iostream>\nusing namespace std;\n\nclass Box {\nprivate:\n    int length, width, height;\npublic:\n    Box(int l = 0, int w = 0, int h = 0) {\n        length = l;\n        width = w;\n        height = h;\n    }\n    \n    int getVolume() {\n        return length * width * height;\n    }\n    \n    Box operator + (Box const &obj) {\n        Box result;\n        result.length = length + obj.length;\n        result.width = width + obj.width;\n        result.height = height + obj.height;\n        return result;\n    }\n};\n\nint main() {\n    Box b1(3, 4, 5), b2(3, 3, 5);\n    Box b3 = b1 + b2;\n    cout << b3.getVolume();\n    return 0;\n}",
+        "expected_output": "180"
+      }
+    },
+    {
+      "id": 15,
+      "language": "C++",
+      "title": "C++ Templates",
+      "description": "Learn about templates in C++.",
+      "content": [
+        {
+          "type": "text",
+          "content": "In this lesson, we will learn about templates, which are powerful features of C++ that allow functions and classes to operate with generic types. Templates enable us to create a single function or class that works with different data types without having to rewrite the same code multiple times. There are two types of templates: function templates and class templates. Templates are the foundation of generic programming and are extensively used in the C++ Standard Template Library (STL). Below is an example demonstrating a function template that can find the maximum of two values of any data type."
+        },
+        {
+          "type": "code",
+          "content": "#include <iostream>\nusing namespace std;\n\n// Function template to find maximum of two values\ntemplate <typename T>\nT findMax(T a, T b) {\n    return (a > b) ? a : b;\n}\n\nint main() {\n    // For integers\n    cout << \"Max of 3 and 7: \" << findMax<int>(3, 7) << endl;\n    \n    // For doubles\n    cout << \"Max of 3.5 and 7.5: \" << findMax<double>(3.5, 7.5) << endl;\n    \n    // For characters\n    cout << \"Max of 'a' and 'z': \" << findMax<char>('a', 'z');\n    \n    return 0;\n}"
+        }
+      ],
+      "test": {
+        "question": "Create a template function 'addValues' that adds two numbers and use it to add integers 5 and 10, then print the result.",
+        "code": "#include <iostream>\nusing namespace std;\n\ntemplate <typename T>\nT addValues(T a, T b) {\n    return a + b;\n}\n\nint main() {\n    cout << addValues<int>(5, 10);\n    return 0;\n}",
+        "expected_output": "15"
+      }
+    },
+    {
+      "id": 16,
+      "language": "C++",
+      "title": "C++ Exception Handling",
+      "description": "Learn about exception handling in C++.",
+      "content": [
+        {
+          "type": "text",
+          "content": "In this lesson, we will learn about exception handling, which is a mechanism to handle runtime errors gracefully. Exceptions are unexpected events that occur during program execution, like division by zero, accessing an invalid array index, or running out of memory. C++ provides the try, catch, and throw keywords to handle exceptions. The code that might throw an exception is placed in a try block, and exceptions are caught and handled in catch blocks. This helps in writing robust programs that can handle unexpected situations without crashing. Below is an example demonstrating exception handling for division by zero."
+        },
+        {
+          "type": "code",
+          "content": "#include <iostream>\nusing namespace std;\n\ndouble divide(int a, int b) {\n    if (b == 0) {\n        throw \"Division by zero!\";\n    }\n    return (double)a / b;\n}\n\nint main() {\n    int x = 10;\n    int y = 0;\n    \n    try {\n        double result = divide(x, y);\n        cout << \"Result: \" << result << endl;\n    }\n    catch (const char* msg) {\n        cout << \"Error: \" << msg;\n    }\n    \n    return 0;\n}"
+        }
+      ],
+      "test": {
+        "question": "Write a program that throws an exception when a negative number is passed to a function and catches it to print 'Error: Number cannot be negative!'",
+        "code": "#include <iostream>\nusing namespace std;\n\nvoid checkPositive(int number) {\n    if (number < 0) {\n        throw \"Number cannot be negative!\";\n    }\n    cout << \"The number is: \" << number;\n}\n\nint main() {\n    try {\n        checkPositive(-5);\n    }\n    catch (const char* msg) {\n        cout << \"Error: \" << msg;\n    }\n    return 0;\n}",
+        "expected_output": "Error: Number cannot be negative!"
+      }
+    },
+    {
+      "id": 17,
+      "language": "C++",
+      "title": "C++ File Handling",
+      "description": "Learn about file input and output in C++.",
+      "content": [
+        {
+          "type": "text",
+          "content": "In this lesson, we will learn about file handling in C++. File handling allows us to store and retrieve data permanently. C++ provides ofstream for writing to files and ifstream for reading from files. Both these classes come from the fstream library. We'll learn how to open files, write data to them, and read data from them. This is essential for programs that need to persist data between executions."
+        },
+        {
+          "type": "code",
+          "content": "#include <iostream>\nusing namespace std;\n\nint main() {\n    string text = \"Hello File!\";\n    cout << \"Content: \" << text;\n    return 0;\n}"
+        }
+      ],
+      "test": {
+        "question": "Write a program that creates a string variable with content 'File Content' and prints it to console.",
+        "code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    string content = \"File Content\";\n    cout << content;\n    return 0;\n}",
+        "expected_output": "File Content"
+      }
+    },
+    {
+      "id": 18,
+      "language": "C++",
+      "title": "C++ String Operations",
+      "description": "Learn about string manipulation in C++.",
+      "content": [
+        {
+          "type": "text",
+          "content": "In this lesson, we will explore string operations in C++. The string class provides many useful methods for string manipulation, including concatenation, substring extraction, finding characters or substrings, and modifying string content. Understanding string operations is crucial for text processing and data manipulation in C++."
+        },
+        {
+          "type": "code",
+          "content": "#include <iostream>\nusing namespace std;\n\nint main() {\n    string str1 = \"Hello\";\n    string str2 = \"World\";\n    string result = str1 + \" \" + str2;\n    cout << result << endl;\n    cout << \"Length: \" << result.length();\n    return 0;\n}"
+        }
+      ],
+      "test": {
+        "question": "Create two strings 'C++' and 'Programming', concatenate them with a space in between, and print the result.",
+        "code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    string s1 = \"C++\";\n    string s2 = \"Programming\";\n    cout << s1 + \" \" + s2;\n    return 0;\n}",
+        "expected_output": "C++ Programming"
+      }
+    },
+    {
+      "id": 19,
+      "language": "C++",
+      "title": "C++ Structures",
+      "description": "Learn about structures in C++.",
+      "content": [
+        {
+          "type": "text",
+          "content": "In this lesson, we will learn about structures in C++. A structure is a user-defined data type that groups related data elements together, even if they are of different types. Structures provide a way to organize data in a more meaningful way than using separate variables. They are particularly useful when dealing with records or entities that have multiple attributes."
+        },
+        {
+          "type": "code",
+          "content": "#include <iostream>\nusing namespace std;\n\nstruct Student {\n    string name;\n    int age;\n    double gpa;\n};\n\nint main() {\n    Student s1;\n    s1.name = \"John\";\n    s1.age = 20;\n    s1.gpa = 3.5;\n    cout << s1.name << \" is \" << s1.age << \" years old\";\n    return 0;\n}"
+        }
+      ],
+      "test": {
+        "question": "Create a structure 'Point' with x and y coordinates (both 5), then print them with a space between them.",
+        "code": "#include <iostream>\nusing namespace std;\n\nstruct Point {\n    int x;\n    int y;\n};\n\nint main() {\n    Point p;\n    p.x = 5;\n    p.y = 5;\n    cout << p.x << \" \" << p.y;\n    return 0;\n}",
+        "expected_output": "5 5"
+      }
+    },
+    {
+      "id": 20,
+      "language": "C++",
+      "title": "C++ References",
+      "description": "Learn about references in C++.",
+      "content": [
+        {
+          "type": "text",
+          "content": "In this lesson, we will learn about references in C++. A reference is an alias for an existing variable. Unlike pointers, references must be initialized when declared, cannot be null, and cannot be changed to refer to another variable. References are often used in function parameters to avoid copying large objects and to allow functions to modify their arguments."
+        },
+        {
+          "type": "code",
+          "content": "#include <iostream>\nusing namespace std;\n\nvoid modifyValue(int& num) {\n    num = num * 2;\n}\n\nint main() {\n    int x = 10;\n    modifyValue(x);\n    cout << \"Modified value: \" << x;\n    return 0;\n}"
+        }
+      ],
+      "test": {
+        "question": "Create a function that takes an integer reference and doubles it. Call it with value 5 and print the result.",
+        "code": "#include <iostream>\nusing namespace std;\n\nvoid doubleNumber(int& num) {\n    num *= 2;\n}\n\nint main() {\n    int value = 5;\n    doubleNumber(value);\n    cout << value;\n    return 0;\n}",
+        "expected_output": "10"
+      }
+    },
+    {
+      "id": 21,
+      "language": "C++",
+      "title": "C++ Enumerations",
+      "description": "Learn about enumerations in C++.",
+      "content": [
+        {
+          "type": "text",
+          "content": "In this lesson, we will learn about enumerations (enum) in C++. An enumeration is a user-defined data type consisting of a set of named constants. Enums are useful when we have a fixed set of values that a variable can take. They make the code more readable and maintainable by giving meaningful names to numeric constants."
+        },
+        {
+          "type": "code",
+          "content": "#include <iostream>\nusing namespace std;\n\nenum Day { SUNDAY = 1, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY };\n\nint main() {\n    Day today = MONDAY;\n    cout << \"Day number: \" << today;\n    return 0;\n}"
+        }
+      ],
+      "test": {
+        "question": "Create an enum for directions (NORTH=1, SOUTH=2) and print the value of SOUTH.",
+        "code": "#include <iostream>\nusing namespace std;\n\nenum Direction { NORTH = 1, SOUTH = 2 };\n\nint main() {\n    Direction d = SOUTH;\n    cout << d;\n    return 0;\n}",
+        "expected_output": "2"
+      }
+    },
+    {
+      "id": 22,
+      "language": "C++",
+      "title": "C++ Type Casting",
+      "description": "Learn about type casting in C++.",
+      "content": [
+        {
+          "type": "text",
+          "content": "In this lesson, we will learn about type casting in C++. Type casting is the process of converting a value from one data type to another. C++ provides several types of casting operators including static_cast, dynamic_cast, const_cast, and reinterpret_cast. We'll focus on basic type conversion and static_cast, which is the most commonly used and safest form of casting."
+        },
+        {
+          "type": "code",
+          "content": "#include <iostream>\nusing namespace std;\n\nint main() {\n    double pi = 3.14159;\n    int intPi = static_cast<int>(pi);\n    cout << \"Original: \" << pi << endl;\n    cout << \"Converted: \" << intPi;\n    return 0;\n}"
+        }
+      ],
+      "test": {
+        "question": "Convert the float number 5.67 to an integer using static_cast and print the result.",
+        "code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    float num = 5.67;\n    cout << static_cast<int>(num);\n    return 0;\n}",
+        "expected_output": "5"
+      }
+    },
+    {
+      "id": 23,
+      "language": "C++",
+      "title": "C++ Namespaces",
+      "description": "Learn about namespaces in C++.",
+      "content": [
+        {
+          "type": "text",
+          "content": "In this lesson, we will learn about namespaces in C++. Namespaces provide a way to organize code into logical groups and prevent name collisions that can occur especially when your code base includes multiple libraries. A namespace is a declarative region that provides a scope to the identifiers (names of types, functions, variables etc.) inside it."
+        },
+        {
+          "type": "code",
+          "content": "#include <iostream>\n\nnamespace Math {\n    int add(int a, int b) {\n        return a + b;\n    }\n}\n\nnamespace Basic {\n    int add(int a, int b) {\n        return a + b + 1;\n    }\n}\n\nint main() {\n    std::cout << Math::add(2, 3);\n    return 0;\n}"
+        }
+      ],
+      "test": {
+        "question": "Create a namespace 'Calculator' with a multiply function that returns the product of two numbers. Call it with 4 and 5.",
+        "code": "#include <iostream>\n\nnamespace Calculator {\n    int multiply(int a, int b) {\n        return a * b;\n    }\n}\n\nint main() {\n    std::cout << Calculator::multiply(4, 5);\n    return 0;\n}",
+        "expected_output": "20"
+      }
+    },
+    {
+      "id": 24,
+      "language": "C++",
+      "title": "C++ Vectors",
+      "description": "Learn about vectors - C++'s dynamic arrays.",
+      "content": [
+        {
+          "type": "text",
+          "content": "Vectors are like magical arrays that can grow or shrink automatically! Think of a vector as a smart container that manages its size for you. Unlike regular arrays where you need to specify the size beforehand, vectors can adjust their size as you add or remove elements. They store elements in contiguous memory (one after another), which makes accessing elements very fast. Vectors are perfect when you don't know exactly how many elements you'll need, or when you need to add/remove elements frequently. They're similar to ArrayList in Java or List in Python. Common vector operations include push_back() to add elements, pop_back() to remove elements, and using [] or at() to access elements. Vectors also provide useful methods like size(), empty(), and clear()."
+        },
+        {
+          "type": "code",
+          "content": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    vector<int> numbers;\n    \n    // Adding elements\n    numbers.push_back(10);\n    numbers.push_back(20);\n    numbers.push_back(30);\n    \n    // Accessing elements\n    cout << \"First element: \" << numbers[0] << endl;\n    cout << \"Vector size: \" << numbers.size() << endl;\n    \n    // Iterating through vector\n    for(int num : numbers) {\n        cout << num << \" \";\n    }\n    return 0;\n}"
+          }
+        ],
+        "test": {
+          "question": "Create a vector, add numbers 5, 10, 15 to it, then print all elements on one line separated by spaces.",
+          "code": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    vector<int> vec;\n    vec.push_back(5);\n    vec.push_back(10);\n    vec.push_back(15);\n    for(int i = 0; i < vec.size(); i++) {\n        cout << vec[i] << \" \";\n    }\n    return 0;\n}",
+          "expected_output": "5 10 15"
+        }
+      },
+    {
+      "id": 25,
+      "language": "C++",
+      "title": "C++ Unordered Map",
+      "description": "Learn about unordered maps - C++'s hash tables.",
+      "content": [
+        {
+          "type": "text",
+          "content": "Unordered maps are like dictionaries where you can store pairs of items - a key and its corresponding value! They're similar to HashMaps in Java or dictionaries in Python. The 'unordered' part means that the elements are not stored in any particular order (unlike regular maps which keep elements sorted by key). This makes them super fast for finding values using their keys. Think of it like a magical phone book where you can instantly find someone's number (value) using their name (key). Each key must be unique, but different keys can have the same value. Unordered maps use a technique called 'hashing' to achieve this fast lookup, making them perfect for when you need quick access to values based on their keys. Common operations include insertion using [], finding elements with find(), and checking if a key exists."
+        },
+        {
+          "type": "code",
+          "content": "#include <iostream>\n#include <unordered_map>\nusing namespace std;\n\nint main() {\n    unordered_map<string, int> scores;\n    \n    // Adding elements\n    scores[\"Alice\"] = 95;\n    scores[\"Bob\"] = 87;\n    scores[\"Charlie\"] = 92;\n    \n    // Accessing elements\n    cout << \"Bob's score: \" << scores[\"Bob\"] << endl;\n    \n    // Checking if key exists\n    if(scores.find(\"Alice\") != scores.end()) {\n        cout << \"Alice's score found!\";\n    }\n    return 0;\n}"
+          }
+        ],
+        "test": {
+          "question": "Create an unordered_map with two entries: 'One'->1 and 'Two'->2, then print each value on a new line in order of One, Two.",
+          "code": "#include <iostream>\n#include <unordered_map>\nusing namespace std;\n\nint main() {\n    unordered_map<string, int> numbers;\n    numbers[\"One\"] = 1;\n    numbers[\"Two\"] = 2;\n    cout << numbers[\"One\"] << endl;\n    cout << numbers[\"Two\"];\n    return 0;\n}",
+          "expected_output": "1\n2"
+        }
+      },
+    {
+      "id": 26,
+      "language": "C++",
+      "title": "C++ List",
+      "description": "Learn about lists - C++'s doubly linked lists.",
+      "content": [
+        {
+          "type": "text",
+          "content": "Lists in C++ are like chains where each element is connected to both its previous and next elements! Unlike vectors that store elements in continuous memory, lists use a structure called a 'doubly linked list' where each element knows about its neighbors. This makes lists really good at inserting or removing elements from any position, as they only need to update the connections between elements. However, you can't directly jump to a specific position like in vectors - you need to follow the chain from the beginning or end. Lists are perfect when you need to do lots of insertions or deletions in the middle of your data, or when you don't need random access to elements. Common operations include push_back(), push_front(), insert(), and remove(). They're similar to LinkedList in Java."
+        },
+        {
+          "type": "code",
+          "content": "#include <iostream>\n#include <list>\nusing namespace std;\n\nint main() {\n    list<int> numbers;\n    \n    // Adding elements\n    numbers.push_back(30);\n    numbers.push_front(10);\n    numbers.push_back(50);\n    \n    // Inserting in the middle\n    auto it = ++numbers.begin();\n    numbers.insert(it, 20);\n    \n    // Printing all elements\n    for(int num : numbers) {\n        cout << num << \" \";\n    }\n    return 0;\n}"
+          }
+        ],
+        "test": {
+          "question": "Create a list, add numbers 10, 20, 30 in order, then print all elements on one line separated by spaces.",
+          "code": "#include <iostream>\n#include <list>\nusing namespace std;\n\nint main() {\n    list<int> lst;\n    lst.push_back(10);\n    lst.push_back(20);\n    lst.push_back(30);\n    for(int num : lst) {\n        cout << num << \" \";\n    }\n    return 0;\n}",
+          "expected_output": "10 20 30"
+        }
+      }
+]
